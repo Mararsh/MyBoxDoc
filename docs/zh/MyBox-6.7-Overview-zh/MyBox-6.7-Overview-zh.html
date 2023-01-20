@@ -7,7 +7,7 @@
 	<META NAME="AUTHOR" CONTENT="Mara Ren">
 	<META NAME="CREATED" CONTENT="20180728;13155733">
 	<META NAME="CHANGEDBY" CONTENT="Mara Ren">
-	<META NAME="CHANGED" CONTENT="20230120;12302348">
+	<META NAME="CHANGED" CONTENT="20230120;17412844">
 	<META NAME="CLASSIFICATION" CONTENT="MyBox用户手册 -  综述">
 	<META NAME="DESCRIPTION" CONTENT="Mara">
 	<META NAME="KEYWORDS" CONTENT="MyBox 用户手册 综述">
@@ -171,37 +171,41 @@
 <P><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">	2023-1-21
 </SPAN></FONT>版本<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">6.7</SPAN></FONT></P>
 <UL>
+	<LI><P STYLE="margin-bottom: 0cm">新增： 
+	</P>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0cm">数据分组方式：时间字段具有相同的世纪<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>年<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>月<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>日<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>时<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>分<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</SPAN></FONT>秒时分为同组。
+				</P>
+		<LI><P STYLE="margin-bottom: 0cm">数据分组方式：行表达式的值相同时分为同组。
+				</P>
+		<LI><P STYLE="margin-bottom: 0cm">“运行系统命令”可设置字符集。
+				</P>
+		<LI><P STYLE="margin-bottom: 0cm">文档《图片的故事》。 
+		</P>
+	</UL>
 	<LI><P STYLE="margin-bottom: 0cm">代码优化： 
 	</P>
 	<UL>
-		<LI><P STYLE="margin-bottom: 0cm">临时数据表定义为类。 
+		<LI><P STYLE="margin-bottom: 0cm">分组的参数保存在数据库中而不是在内存里。
+				</P>
+		<LI><P STYLE="margin-bottom: 0cm">时间的格式中，时分秒总是长值。
+				</P>
+		<LI><P STYLE="margin-bottom: 0cm">重命名内部图片。 
 		</P>
-		<LI><P STYLE="margin-bottom: 0cm">当<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">SQL</SPAN></FONT>标识包含非法字符，将标识用引号围起来，而不是转换字符。
-				</P>
-		<LI><P STYLE="margin-bottom: 0cm">直接读取<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">ffprobe</SPAN></FONT>执行结果，不再依赖<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">jaffree</SPAN></FONT>。
-				</P>
-		<LI><P STYLE="margin-bottom: 0cm">利用<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">javafx</SPAN></FONT>播放<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">mp3</SPAN></FONT>，不再依赖<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">javazoom</SPAN></FONT>。
-				</P>
-		<LI><P STYLE="margin-bottom: 0cm">可以设置数据库批处理的大小。
-				</P>
 	</UL>
 	<LI><P STYLE="margin-bottom: 0cm">解决： 
 	</P>
 	<UL>
-		<LI><P STYLE="margin-bottom: 0cm">当利用临时数据库表进行排序或统计时，结果可能错乱。
+		<LI><P STYLE="margin-bottom: 0cm">当按时间类型的值区间分组时，参数应显示为时间而不是整数。
 				</P>
-		<LI><P STYLE="margin-bottom: 0cm">数据库表的列编辑应处理非法标识。
+		<LI><P STYLE="margin-bottom: 0cm">按条件分组时应当把所有数值导入临时表中，否则结果可能不正确。
 				</P>
-		<LI><P STYLE="margin-bottom: 0cm">数据库表的空数字应显示为空白。
-				</P>
-		<LI><P STYLE="margin-bottom: 0cm">分组排序时应考虑数据类型。
-				</P>
-		<LI><P STYLE="margin-bottom: 0cm">一些示例数据包含错误。
-				</P>
-		<LI><P><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">OCR</SPAN></FONT>语言列表的顺序没有正确应用。
+		<LI><P>按行间隔分组时，错误地把分割个数取为分割尺寸。
 				</P>
 	</UL>
 </UL>
+<P><BR><BR>
+</P>
 <P><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">	</SPAN></FONT><A HREF="http://github.com/Mararsh/MyBox/issues?q=is%3Aissue+is%3Aclosed+milestone%3Av6.7">此版本关闭的需求<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">/</A></SPAN></FONT><A HREF="http://github.com/Mararsh/MyBox/issues?q=is%3Aissue+is%3Aclosed+milestone%3Av6.7">问题列表</A></P>
 <P><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">	</SPAN></FONT>兔年安康！</P>
 <H2 CLASS="cjk"><A NAME="Config1"></A><A NAME="cross-platform"></A> 1.2 </SPAN></FONT>跨平台</H2>
